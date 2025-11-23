@@ -1,0 +1,184 @@
+:root {
+  --blue: #0f3e82;
+  --blue-hover: #0b2f62;
+  --bg: #f5f8fc;
+  --text: #0f1a2b;
+  --border: #d1d8e0;
+  --muted: #6b7280;
+}
+
+body {
+  background: var(--bg);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+/* --- Conteneur principal --- */
+.aeroport-container {
+  max-width: 370px;          /* plus étroit */
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding-bottom: 20px;
+}
+
+/* --- Bandeau bleu --- */
+.header-section {
+  background: var(--blue);
+  text-align: center;
+  color: #fff;
+  padding: 14px 10px 16px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.company-title {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.company-subtitle {
+  font-size: 11.5px;
+  color: #e5ebf6;
+  line-height: 1.3;
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+/* --- Onglets Se connecter / S'inscrire --- */
+.navigation-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.tab {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1.5px solid var(--blue);
+  color: var(--blue);
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.tab.active {
+  background: var(--blue);
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(15, 62, 130, 0.25);
+}
+
+.tab:not(.active):hover {
+  background: #eef3ff;
+}
+
+/* --- Formulaire --- */
+.form-section {
+  padding: 0 20px;
+}
+
+.form-subtitle {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text);
+  margin: 8px 0 14px;
+}
+
+/* --- Champs --- */
+.input-section {
+  margin-bottom: 12px;
+}
+
+.input-label {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: var(--text);
+}
+
+.form-input {
+  width: 90%;
+  padding: 8px 10px;         /* plus petit */
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 13px;
+  transition: border-color 0.15s ease;
+}
+ 
+
+.form-input::placeholder {
+  color: #9aa4b2;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--blue);
+}
+
+/* --- Bouton --- */
+.submit-btn {
+  width: 100%;
+  background: var(--blue);
+  color: #fff;
+  border: none;
+  padding: 8px 12px;          /* plus bas */
+  border-radius: 18px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.submit-btn:hover {
+  background: var(--blue-hover);
+}
+
+/* --- Lien bas de page --- */
+.auth-redirect {
+  text-align: center;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+.auth-redirect p {
+  color: var(--muted);
+  font-size: 12.5px;
+  margin: 0;
+}
+
+.auth-link {
+  color: var(--blue);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+/* ---- Lien "Mot de passe oublié ?" ---- */
+.forgot-password {
+  text-align: right;
+  margin-top: 4px;
+}
+
+.forgot-link {
+  color: #0f3e82;
+  font-weight: 700;
+  font-size: 13.5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+  color: #0b2f62;
+}

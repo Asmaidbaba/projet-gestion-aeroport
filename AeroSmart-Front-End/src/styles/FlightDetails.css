@@ -1,0 +1,238 @@
+/* 🟦 Barre de navigation */
+.navbar {
+  background-color: #0a3a82;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+}
+
+.navbar-logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.nav-link.active {
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 2px;
+}
+
+.nav-refresh {
+  background-color: white;
+  color: #0a3a82;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* 🕑 En-tête horaire */
+.flight-header-fullpage {
+  background-color: #ffffff;
+  border-bottom: 2px solid #e5e7eb;
+  padding: 25px 0;
+  text-align: left;
+  
+}
+
+.flight-time-main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.flight-time-large {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+.flight-info {
+  text-align: left;
+}
+
+.flight-duration-large {
+  color: #374151;
+  font-size: 1rem;
+}
+
+.flight-type-large {
+  background-color: #f87171;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* 📄 Contenu principal */
+.main-content-fullpage {
+  max-width: 1100px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  text-align: left;
+}
+
+.content-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px 30px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.section-title-large {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 6px;
+  text-align: left;
+}
+
+/* Grille alignée à gauche */
+.detail-grid-fullpage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 20px;
+  text-align: left;
+}
+
+.detail-label-large {
+  color: #6b7280;
+  font-weight: 500;
+  text-align: left;
+}
+
+.detail-value-large {
+  color: #111827;
+  font-weight: 600;
+  text-align: left;
+}
+
+/* 📋 Tableau d'informations */
+.info-table-fullpage {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.info-table-fullpage td {
+  padding: 8px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.info-label-large {
+  color: #6b7280;
+  width: 60%;
+  text-align: left;
+}
+
+.info-data-large {
+  color: #111827;
+  text-align: left;
+  font-weight: 600;
+}
+
+.status-delayed-large {
+  color: #d97706;
+  font-weight: 700;
+}
+
+/* 🔘 Boutons */
+.buttons-container-fullpage {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 25px;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 30px;
+}
+
+.btn-large {
+  padding: 10px 28px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-modify-large {
+  background-color: #1e3a8a;
+  color: #ffffff;
+}
+
+.btn-modify-large:hover {
+  background-color: #1e40af;
+}
+
+.btn-delete-large {
+  background-color: #dc2626;
+  color: white;
+}
+
+.btn-delete-large:hover {
+  background-color: #b91c1c;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .detail-grid-fullpage {
+    grid-template-columns: 1fr;
+  }
+
+  .buttons-container-fullpage {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-large {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .flight-time-main {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 0 20px;
+  }
+
+  .flight-info {
+    text-align: left;
+  }
+}

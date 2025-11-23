@@ -1,0 +1,217 @@
+/* Main content - ajout de padding-top pour compenser le header fixe */
+.admin-main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 100px 20px 30px 20px; /* padding-top augmenté pour le header fixe */
+  }
+  
+  .admin-title {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  /* Search section */
+  .admin-search-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    align-items: center;
+  }
+  
+  .admin-search-wrapper {
+    flex: 1;
+    position: relative;
+  }
+  
+  .admin-search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  
+  .admin-search-input {
+    width: 92%;
+    padding: 12px 15px 12px 45px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .admin-search-input:focus {
+    border-color: #003d82;
+  }
+  
+  .admin-add-button {
+    background-color: #003d82;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .admin-add-button:hover {
+    background-color: #002a5c;
+  }
+  
+  /* Flights list */
+  .admin-flights-list {
+    margin-bottom: 20px;
+  }
+  
+  .admin-flight-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px 25px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow 0.3s;
+  }
+  
+  .admin-flight-card:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .admin-flight-info {
+    flex: 1;
+  }
+  
+  .admin-flight-route {
+    font-size: 16px;
+    font-weight: 600;
+    color: #003d82;
+    margin-bottom: 5px;
+  }
+  
+  .admin-flight-details {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  .admin-flight-date {
+    font-size: 14px;
+    color: #666;
+    margin-top: 3px;
+  }
+  
+  .admin-consult-button {
+    background-color: #003d82;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .admin-consult-button:hover {
+    background-color: #002a5c;
+  }
+  
+  /* See more section */
+  .admin-see-more-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+  }
+  
+  .admin-see-more-button {
+    background-color: #b94a3e;
+    color: white;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .admin-see-more-button:hover {
+    background-color: #9a3d33;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .admin-header {
+      flex-direction: column;
+      gap: 15px;
+      padding: 15px 20px;
+    }
+  
+    .admin-nav {
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .admin-nav-link {
+      font-size: 14px;
+    }
+  
+    .admin-main {
+      padding-top: 140px; /* Plus d'espace pour le header responsive */
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  
+    .admin-search-container {
+      flex-direction: column;
+    }
+  
+    .admin-add-button {
+      width: 100%;
+    }
+  
+    .admin-flight-card {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+  
+    .admin-consult-button {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .admin-logo-text {
+      font-size: 20px;
+    }
+  
+    .admin-nav {
+      width: 100%;
+      gap: 10px;
+    }
+  
+    .admin-nav-link {
+      font-size: 13px;
+    }
+  
+    .admin-main {
+      padding-top: 160px;
+    }
+  
+    .admin-title {
+      font-size: 20px;
+    }
+  }
