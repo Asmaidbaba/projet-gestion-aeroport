@@ -1,1 +1,60 @@
-ÿþ
+version: '3.8'
+
+services:
+  # VOTRE SERVICE MÃ‰TÃ‰O
+  weather-service:
+    build: ./weather_service
+    container_name: weather-service
+    ports:
+      - "5000:5000"
+    environment:
+      - OPENWEATHER_API_KEY=58799277743c5472935d3ef9113d76f8
+      - DB_HOST=aerosmart-mysql-37abc3a0-ilhamakarid2002-bc98.i.aivencloud.com
+      - DB_USER=avnadmin
+      - DB_PASSWORD=
+    networks:
+      - flight-network
+
+  # SERVICE VOLS
+  flight-service:
+    build: ./flight_service
+    container_name: flight-service
+    ports:
+      - "5001:5001"
+    environment:
+      - WEATHER_SERVICE_URL=http://localhost:8080/api/flights
+    networks:
+      - flight-network
+    depends_on:
+      - weather-service
+
+  # SERVICE PASSAGER
+  passenger-service:
+    build: ./passenger_service
+    container_name: passenger-service
+    ports:
+      - "9090:9090"
+    networks:
+      - flight-network
+
+  # SERVICE RÃ‰SERVATION
+  booking-service:
+    build: ./booking_service
+    container_name: booking-service
+    ports:
+      - "5000:5000"
+    environment:
+      - WEATHER_SERVICE_URL=http://weather-service:5000
+      - FLIGHT_SERVICE_URL=http://localhost:8080/api
+      - PASSENGER_SERVICE_URL=http://localhost:9090/api
+    networks:
+      - flight-network
+    depends_on:
+      - weather-service
+      - flight-service
+      - passenger-service
+
+networks:
+  flight-network:
+    driver: bridge
+
